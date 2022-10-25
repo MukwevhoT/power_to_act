@@ -1,0 +1,108 @@
+@import './config';
+
+header {
+    .container {
+        @include flex($justify:space-between);
+    }
+
+    .blob {
+        text-transform: uppercase;
+        color: $green;
+        opacity: 0.2;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+}
+
+
+.sign-up {
+    form {
+        width: 50%;
+        margin: 0 auto;
+        background-color: $green;
+        padding: 30px 60px;
+        border-radius: 30px;
+        transition: all 0.5s ease;
+
+        &.hide {
+            opacity: 0;
+        }
+
+        input, textarea {
+            display: block;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: transparent;
+            font-size: 14px;
+            color: $black;
+            margin: 10px 0;
+            border: 0;
+            border-bottom: 1px solid $white;
+            outline: none;
+            transition: all 0.3s ease;
+            color: $white;
+
+            &:focus {
+                border-color: $light-green;
+                border-width: 2px;
+            }
+        }
+
+        button {
+            @extend input;
+            margin-top: 30px;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 5px;
+            background-color: $white;
+            border: 0;
+            border-radius: 30px;
+            color: $green;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $light-green;
+                color: $white;
+            }
+        }
+        
+    }
+}
+
+.success {
+    position: fixed;
+    top: 20%;
+    z-index: 3;
+    left: 25%;
+    width: 50%;
+    background-color: $white;
+    border-radius: 30px;
+    padding: 50px;
+    transition: all 0.3s ease;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0);
+
+    &.show {
+        transform: scale(1);        
+        opacity: 1;
+    }
+
+    .heading {
+        line-height: 1.2;
+    }
+
+    p {
+        margin: 50px 0;
+    }
+
+    .btn {
+        color: $white;
+        background-color: $green;
+
+        &:hover {
+            letter-spacing: 5px;
+        }
+    }
+}

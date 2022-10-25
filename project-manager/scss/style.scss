@@ -1,0 +1,205 @@
+@import './config';
+
+.login {
+    .popup {
+        padding: 15px;
+        background-color: #fefefe;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.149);
+        border-radius: 10px;
+        transition: all 0.5s ease;
+        @include flex($justify:space-between);
+
+        &.fade {
+            opacity: 0;
+        }
+
+        span {
+            text-transform: uppercase;
+        }
+
+        .fas {
+            border: 1px solid rgba(0, 0, 0, 0.407);
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $deep-blue;
+                color: #fff;
+                border-color: $deep-blue;
+            }
+        }
+    }
+
+    .container {
+        width: 400px;
+    }
+
+    .login-form {
+        display: none;
+        opacity: 0;
+        transition: all 0.5s ease;
+
+        &.show {
+            opacity: 1;
+        }
+
+        h2 {
+            font-weight: 400;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .group {
+            margin: 15px 0;
+
+            &.numbers {
+                @include grid(repeat(3, 1fr), 10px);
+
+                label {
+                    grid-column: 1/4;
+                    margin-bottom: 0;
+                }
+
+                input {
+                    padding: 12px 10px;
+                }
+            }
+
+            label {
+                font-size: 15px;
+                text-transform: uppercase;
+                display: inline-block;
+                margin-bottom: 5px;
+            }
+        }
+        
+        input, button, textarea {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            outline: none;
+            border-radius: 4px;
+        }
+
+        input, textarea {
+            font-size: 14px;
+            background-color: transparent;
+            border: 1px solid rgba(0, 0, 0, 0.42);
+
+            &:focus {
+                border-color: #242424;
+            }
+
+            &[type="file"] {
+                cursor: pointer;
+            }
+        }
+
+        button {
+            margin-top: 30px;
+            background-color: #242424;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            border: 1px solid #242424;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            
+            &:hover {
+                border-color: $deep-blue;
+                background-color: $deep-blue;
+            }
+        }
+    }
+}
+
+// overview page
+.overview {
+    .container {
+        width: 400px;
+    }
+
+    .project {
+        box-shadow: 0 0 16px rgba(0, 0, 0, 0.092);
+        background-color: #fefefe;
+        padding: 20px 10px;
+        border-radius: 4px;
+    }
+
+    h2 {
+        text-transform: uppercase;
+    }
+    
+    .project-name {
+        font-size: 20px;
+        text-transform: uppercase;
+        margin: 10px 0 20px 0;
+    }
+
+    .stats {
+        @include grid(repeat(3, 1fr), 10px);
+
+        div {
+            padding: 10px;
+            border-radius: 2px;
+            justify-content: baseline;
+        }
+
+        .number {
+            font-size: 30px;
+            margin-bottom: 2px;
+        }
+    }
+
+    .details {
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 2px;
+        margin-top: 20px;
+        color: #242424;
+
+        span {
+            margin: 5px 0;
+        }
+    }
+
+    .progress-bar {
+        background-color: rgba(0, 0, 0, 0.09);
+        width: 90%;
+        margin: 20px auto 0 auto;
+        border-radius: 2px;
+        @include flex($justify:space-between);
+
+        div {
+            transform: scale(3);
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #ccc;
+
+            &.good {
+                background-color: $deep-blue;
+                color: #fff;
+            }
+
+            &.bad {
+                background-color: #242424;
+                color: #fff;
+            }
+        }
+    }
+
+    .good {
+        background-color: $deep-blue;
+        color: #fff;
+    }
+
+    .bad {
+        background-color: #242424;
+        color: #fff;
+    }
+}

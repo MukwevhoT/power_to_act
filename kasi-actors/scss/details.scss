@@ -1,0 +1,300 @@
+@import './config';
+
+header {
+    background: linear-gradient(to right, $white 50%, transparent 50%);
+    z-index: 3;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+main {
+    padding: 50px 0;
+    
+    .container {
+        position: relative;
+    }
+    
+    .project {
+        @include grid(1fr 1fr);
+
+        .text {
+            align-self: center;
+            padding-right: 50px;
+        }
+
+        .heading {
+            text-transform: uppercase;
+        }
+
+        .issues {
+            margin: 20px 0;
+
+            span {
+                display: inline-block;
+                font-size: 12px;
+                text-transform: uppercase;
+                background-color: $green;
+                color: $white;
+                padding: 5px;
+                border-radius: 4px;
+                margin: 0 5px;
+
+                &.title {
+                    background-color: transparent;
+                    padding: 0;
+                    color: $black;
+                    font-weight: bold;
+                    font-size: 14px;
+                    margin: 0;
+                }
+            }
+        }
+
+        p {
+            margin: 20px 0 50px 0;
+            line-height: 1.6
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: $light-green;
+            color: $white;
+            margin-right: 20px;
+
+            &:hover {
+                background-color: $green;
+                color: $white;
+            }
+        }
+
+        .chat-btn {
+            background-color: transparent;
+            border: 1px solid $green;
+            cursor: pointer;
+            color: $green;
+            padding: 14px 29px;
+
+            .fas {
+                transition: all 0.3s ease;
+            }
+
+            &:hover {
+                background-color: transparent;
+                color: $green;
+            }
+            
+            &:hover .fas {
+                margin-left: 10px;
+            }
+
+            span {
+                background-color: $green;
+            }
+        }
+
+        .gallery {
+            background-color: $green;
+            padding: 10px;
+            border-radius: 10px;
+            height: 400px;
+            overflow-y: hidden;
+            overflow-x: scroll;
+            white-space: nowrap;
+            position: relative;
+
+            img {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                margin-bottom: 10px;
+                border-radius: 10px;
+                transition: all 0.5s ease;
+                margin-right: 10px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .chat-box {
+        position: fixed;
+        z-index: 3;
+        bottom: 2%;
+        right: 2%;
+        height: 0;
+        width: 20%;
+        background-color: $green;
+        border-radius: 30px;
+        overflow-y: scroll;
+        transition: all 1s ease;
+
+        &.open-chat {
+            height: 90%;
+        }
+
+        .chat-header {
+            position: sticky;
+            top: 10px;
+            padding: 10px 20px;
+            background-color: $white;
+            color: $green;
+            border-radius: 30px;
+            margin: 10px;
+            transition: all 0.5s ease;
+            @include flex($justify:space-between);
+
+            .name {
+                opacity: 0;
+                transition: all 0.5s ease;
+
+                &.show {
+                    opacity: 1;
+                }
+            }
+
+            .fa-user-check {
+                margin-right: 10px;
+            }
+        }
+
+        .chat-body {
+            padding: 20px;
+            transition: all 0.5s ease;
+
+            .message {
+                padding: 5px 10px;
+                display: block;
+                border-radius: 10px;
+                margin-bottom: 10px;
+
+                div {
+                    @include flex($justify:space-between);
+                }
+
+                &.left {
+                    align-self: flex-start;
+                    background-color: rgba(28, 96, 96, 0.367);
+                    color: $white;
+                    border-top-left-radius: 0;
+                }
+
+                &.right {
+                    color: $black;
+                    background-color: rgba(211, 255, 242, 0.697);
+                    border-top-right-radius: 0;
+
+                    .time {
+                        text-align: right;
+                    }
+                }
+
+                .time {
+                    display: block;
+                    font-size: 9px;
+                }
+                .text {
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 1.2;
+                }
+            }
+        }
+
+        .register-form {
+            width: 100%;
+            padding: 20px;
+            transition: all 0.3s ease;
+
+            &.hide {
+                opacity: 0;
+            }
+
+            input, button {
+                display: block;
+                margin: 20px 0;
+                width: 100%;
+                border-radius: 30px;
+                border: 0;
+                padding: 10px 20px;
+                outline: none;
+                transition: all 0.3s ease;
+            }
+
+            input {
+                background-color: $white;
+                color: $black;
+                font-size: 14px;
+
+                &:focus {
+                    outline-width: 2px;
+                    outline-style: solid;
+                    outline-color: $light-green;
+                }
+            }
+
+            button {
+                background-color: $light-green;
+                color: $white;
+                cursor: pointer;
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+        }
+        
+        .chat-form {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            padding: 10px;
+            @include grid(2fr 0.2fr, 5px);
+            opacity: 0;
+            transition: all 0.5s ease;
+
+            &.show {
+                opacity: 1;
+            }
+
+            textarea, button {
+                display: inline-block;
+                border-radius: 30px;
+                border: 0;
+                padding: 10px;
+                font-size: 14px;
+                font-weight: normal;
+                outline: none;
+                transition: all 0.3s ease;
+            }
+
+            textarea {
+                padding: 10px 20px;
+                background-color: $white;
+                color: $black;
+                
+                &:focus {
+                    outline-width: 2px;
+                    outline-style: solid;
+                    outline-color: $light-green;
+                }
+            }
+
+            button {
+                color: $white;
+                background-color: $light-green;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $white;
+                    color: $black;
+                }
+            }
+        }
+    }
+    
+}
+

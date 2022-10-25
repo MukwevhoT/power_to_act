@@ -1,0 +1,159 @@
+// @import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Erica+One&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import './colors';
+
+// css override
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+// custom scrollbar
+::-webkit-scrollbar {
+    background-color: inherit;
+    width: 4px;
+
+    &-thumb {
+        border-radius: 30px;
+        background-color: $black;
+    }
+}
+
+// functions for layout
+@mixin flex($align:center, $justify:center, $direction:row, $wrap:wrap) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin grid($columns:1fr 1fr, $gap:20px) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-gap: $gap;
+}
+
+// function for transisions
+@mixin transition($val) {
+    transition: all $val ease;
+}
+
+// container
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 1250px) {
+        max-width: 90%;
+    }
+}
+
+body {
+    background-color: $white;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    padding: 10px 0;
+
+    .logo {
+        text-transform: uppercase;
+        position: relative;
+        color: $black;
+        transition: all 0.5s ease;
+
+        &.fade {
+            opacity: 0;
+        }
+
+        span:nth-of-type(1) {
+            position: absolute;
+            left: 50px;
+            top: 20px;
+            font-size: 15px;
+            letter-spacing: 2px;
+        }
+
+        span:nth-of-type(2) {
+            font-weight: bold;
+            font-size: 40px;
+            opacity: 0.1;
+        }
+    }
+}
+
+section {
+    padding: 100px 0;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+span {
+    font-size: 16px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.underlined-link {
+    position: relative;
+    transition: all 0.3s ease;
+    font-size: 16px;
+
+    &:hover span {
+        width: 100%;
+    }
+
+    .fas {
+        margin-left: 5px;
+        transition: all 0.3s ease;
+    }
+
+    span {
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        height: 1px;
+        width: 25%;
+        transition: all 0.3s ease;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: 1070px) {
+        padding: 12px 26px;
+    }
+}

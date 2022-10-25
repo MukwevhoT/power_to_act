@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Erica+One&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Oswald", sans-serif;
+}
+
+::-webkit-scrollbar {
+  background-color: inherit;
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background-color: #1a1a1a;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1250px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+body {
+  background-color: #F1EAD1;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 10px 0;
+}
+header .logo {
+  text-transform: uppercase;
+  position: relative;
+  color: #1a1a1a;
+  transition: all 0.5s ease;
+}
+header .logo.fade {
+  opacity: 0;
+}
+header .logo span:nth-of-type(1) {
+  position: absolute;
+  left: 50px;
+  top: 20px;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+header .logo span:nth-of-type(2) {
+  font-weight: bold;
+  font-size: 40px;
+  opacity: 0.1;
+}
+
+section {
+  padding: 100px 0;
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+span {
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.underlined-link {
+  position: relative;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+.underlined-link:hover span {
+  width: 100%;
+}
+.underlined-link .fas {
+  margin-left: 5px;
+  transition: all 0.3s ease;
+}
+.underlined-link span {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 1px;
+  width: 25%;
+  transition: all 0.3s ease;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 30px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 1070px) {
+  .btn {
+    padding: 12px 26px;
+  }
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+header .blob {
+  text-transform: uppercase;
+  color: #081D15;
+  opacity: 0.2;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.sign-up form {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #081D15;
+  padding: 30px 60px;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+}
+.sign-up form.hide {
+  opacity: 0;
+}
+.sign-up form input, .sign-up form button, .sign-up form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: transparent;
+  font-size: 14px;
+  color: #1a1a1a;
+  margin: 10px 0;
+  border: 0;
+  border-bottom: 1px solid #F1EAD1;
+  outline: none;
+  transition: all 0.3s ease;
+  color: #F1EAD1;
+}
+.sign-up form input:focus, .sign-up form button:focus, .sign-up form textarea:focus {
+  border-color: #059136;
+  border-width: 2px;
+}
+.sign-up form button {
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  background-color: #F1EAD1;
+  border: 0;
+  border-radius: 30px;
+  color: #081D15;
+  cursor: pointer;
+}
+.sign-up form button:hover {
+  background-color: #059136;
+  color: #F1EAD1;
+}
+
+.success {
+  position: fixed;
+  top: 20%;
+  z-index: 3;
+  left: 25%;
+  width: 50%;
+  background-color: #F1EAD1;
+  border-radius: 30px;
+  padding: 50px;
+  transition: all 0.3s ease;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0);
+}
+.success.show {
+  transform: scale(1);
+  opacity: 1;
+}
+.success .heading {
+  line-height: 1.2;
+}
+.success p {
+  margin: 50px 0;
+}
+.success .btn {
+  color: #F1EAD1;
+  background-color: #081D15;
+}
+.success .btn:hover {
+  letter-spacing: 5px;
+}/*# sourceMappingURL=signup.css.map */

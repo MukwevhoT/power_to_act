@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./scss/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- login -->
+    <section class="login">
+        <div class="container">
+            <div class="popup">
+                <span>Please update your project's progress</span>
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            <!-- form -->
+            <form class="login-form" action="#" method="post">
+                <h2>Project details</h2>
+                <!--  -->
+                <div class="group">
+                    <input type="text" name="project-name" id="title" placeholder="Project name" required>
+                </div>
+                <!--  -->
+                <div class="group numbers">
+                    <label>Milestones</label>
+                    <input type="number" name="total-set" class="total-set" placeholder="Total set" required>
+                    <input type="number" name="total-achieved" class="total-achieved" placeholder="Total achieved" required>
+                    <input type="number" name="participants" class="participants" placeholder="Participants" required>
+                </div>
+                <!--  -->
+                <div class="group">
+                    <input type="text" name="milestone" id="milestone" placeholder="Enter milestone achieved" required>
+                </div>
+                <!--  -->
+                <div class="group">
+                    <textarea name="milestone-details" id="mileston-details" rows="6" placeholder="Milestone details" required></textarea>
+                </div>
+                <!--  -->
+                <div class="group">
+                    <label for="image">Attach milestone image</label>
+                    <input type="file" name="image" id="image" placeholder="Images" multiple>
+                </div>
+                <!--  -->
+                <button type="submit">update</button>
+            </form>
+        </div>
+    </section>
+
+    
+    <script src="./js/app.js"></script>
+</body>
+</html>

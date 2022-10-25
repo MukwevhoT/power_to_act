@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./scss/signup.css">
+    <title>Kasi Actors | Sign up</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span>Kasi</span>
+                <span>Actors</span>
+            </div>
+
+            <span class="blob">Together we can make effective change in our communities</span>
+        </div>
+    </header>
+
+    <section class="sign-up">
+        <div class="container">
+            <form>
+                <input  id="first_name" type="text" placeholder="First name" required>
+                <input id="surname" type="text" placeholder="Surname" required>
+                <input id="email" type="email" placeholder="Email" required>
+                <input id="phone_number" type="number" placeholder="Phone number (optional)">
+                <input id="location" type="text" placeholder="Location (where you live)" required>
+                <!-- <textarea placeholder="Issues of interest" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false" required rows="1"></textarea> -->
+                <input id="password" type="password" placeholder="password" required>
+                <input id="password_confirmation" type="password" placeholder="confirm password" required>
+                <button type="submit" id="register">sign up</button>
+            </form>
+
+            <div class="success">
+                <h1 class="heading">Congratulations!<br>you have successfully signed up</h1>
+                <p>Your commitment to doing good for the community goes a long way,<br> a lot further than you may think. We appreciate you!</p>
+                <a href="./index.html" class="btn">Okay</a>
+            </div>
+        </div>
+    </section>
+    
+    <script src="./js/auth.js"></script>
+    <!-- <script>
+        const form = document.querySelector('form');
+        const success = document.querySelector('.success');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.classList.add('hide');
+            success.classList.add('show');
+        })
+    </script> -->
+</body>
+</html>

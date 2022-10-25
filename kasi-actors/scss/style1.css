@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 30px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 1070px) {
+  .btn {
+    padding: 12px 26px;
+  }
+}
+
+main .project .btn {
+  display: inline-block;
+  background-color: #059136;
+  color: #F1EAD1;
+  margin-right: 20px;
+}
+main .project .btn:hover {
+  background-color: #081D15;
+  color: #F1EAD1;
+}
+main .project .chat-btn {
+  background-color: transparent;
+  border: 1px solid #081D15;
+  cursor: pointer;
+  color: #081D15;
+  padding: 14px 29px;
+}
+main .project .chat-btn .fas {
+  transition: all 0.3s ease;
+}
+main .project .chat-btn:hover {
+  background-color: transparent;
+  color: #081D15;
+}
+main .project .chat-btn:hover .fas {
+  margin-left: 10px;
+}
+main .project .chat-btn span {
+  background-color: #081D15;
+}
+
+body {
+  background-color: #f9f9f9;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1240px) {
+  .container {
+    max-width: 94%;
+  }
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+h3 {
+  font-weight: 30px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+span {
+  font-size: 15px;
+  display: inline-block;
+}
+span.title {
+  font-size: 20px;
+}
+
+.login .popup {
+  padding: 15px;
+  background-color: #fefefe;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.149);
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.login .popup.fade {
+  opacity: 0;
+}
+.login .popup span {
+  text-transform: uppercase;
+}
+.login .popup .fas {
+  border: 1px solid rgba(0, 0, 0, 0.407);
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.login .popup .fas:hover {
+  background-color: rgb(2, 82, 181);
+  color: #fff;
+  border-color: rgb(2, 82, 181);
+}
+.login .container {
+  width: 400px;
+}
+.login .login-form {
+  display: none;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.login .login-form.show {
+  opacity: 1;
+}
+.login .login-form h2 {
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.login .login-form .group {
+  margin: 15px 0;
+}
+.login .login-form .group.numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.login .login-form .group.numbers label {
+  grid-column: 1/4;
+  margin-bottom: 0;
+}
+.login .login-form .group.numbers input {
+  padding: 12px 10px;
+}
+.login .login-form .group label {
+  font-size: 15px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.login .login-form input, .login .login-form button, .login .login-form textarea {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  outline: none;
+  border-radius: 4px;
+}
+.login .login-form input, .login .login-form textarea {
+  font-size: 14px;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.42);
+}
+.login .login-form input:focus, .login .login-form textarea:focus {
+  border-color: #242424;
+}
+.login .login-form input[type=file], .login .login-form textarea[type=file] {
+  cursor: pointer;
+}
+.login .login-form button {
+  margin-top: 30px;
+  background-color: #242424;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  border: 1px solid #242424;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.login .login-form button:hover {
+  border-color: rgb(2, 82, 181);
+  background-color: rgb(2, 82, 181);
+}
+
+.overview .container {
+  width: 400px;
+}
+.overview .project {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.092);
+  background-color: #fefefe;
+  padding: 20px 10px;
+  border-radius: 4px;
+}
+.overview h2 {
+  text-transform: uppercase;
+}
+.overview .project-name {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 10px 0 20px 0;
+}
+.overview .stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.overview .stats div {
+  padding: 10px;
+  border-radius: 2px;
+  justify-content: baseline;
+}
+.overview .stats .number {
+  font-size: 30px;
+  margin-bottom: 2px;
+}
+.overview .details {
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 2px;
+  margin-top: 20px;
+  color: #242424;
+}
+.overview .details span {
+  margin: 5px 0;
+}
+.overview .progress-bar {
+  background-color: rgba(0, 0, 0, 0.09);
+  width: 90%;
+  margin: 20px auto 0 auto;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.overview .progress-bar div {
+  transform: scale(3);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+.overview .progress-bar div.good {
+  background-color: rgb(2, 82, 181);
+  color: #fff;
+}
+.overview .progress-bar div.bad {
+  background-color: #242424;
+  color: #fff;
+}
+.overview .good {
+  background-color: rgb(2, 82, 181);
+  color: #fff;
+}
+.overview .bad {
+  background-color: #242424;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */

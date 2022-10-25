@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./scss/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- overview -->
+    <section class="overview">
+        <div class="container">
+            <!-- project card -->
+            <div class="project">
+                <h2>Overview</h2>
+                <span class="project-name" id="project-name"></span>
+                <!-- numbers -->
+                <div class="stats">
+                    <div class="completed">
+                        <span id="number-achieved" class="number"></span>
+                        <br>
+                        <span>Milestones achieved</span>
+                    </div>
+                    <div class="participants">
+                        <span id="number-participants" class="number"></span>
+                        <br>
+                        <span>Participants</span>
+                    </div>
+                    <div class="for-review">
+                        <span id="number-for-review" class="number"></span>
+                        <br>
+                        <span>For review</span>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <span class="milestone-missed">Milestones missed: <span id="missed-number"></span></span>
+                    <br>
+                    <span class="last-updated">Last updated: <span id="last-updated"></span></span>
+                </div>
+
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </div>
+    </section>
+
+    
+    <script src="./js/overview.js"></script>
+</body>
+</html>
